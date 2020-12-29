@@ -18,8 +18,6 @@
 		1970471D259908A300DE6785 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1970471C259908A300DE6785 /* LaunchScreen.storyboard */; };
 		19704721259909A400DE6785 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19704720259909A400DE6785 /* EmptyListView.swift */; };
 		19770A1D259B2CA800151837 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19770A1C259B2CA800151837 /* Theme.swift */; };
-		19770A21259B2CD500151837 /* ThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19770A20259B2CD500151837 /* ThemeData.swift */; };
-		19770A24259B2D3900151837 /* ThemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19770A23259B2D3900151837 /* ThemeSettings.swift */; };
 		19A501A3259A2C5C00FCFE33 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A501A2259A2C5C00FCFE33 /* SettingsView.swift */; };
 		19A501A6259A2F6200FCFE33 /* FormRowStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A501A5259A2F6200FCFE33 /* FormRowStaticView.swift */; };
 		19A501A9259A31F400FCFE33 /* FormRowLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A501A8259A31F400FCFE33 /* FormRowLinkView.swift */; };
@@ -48,8 +46,6 @@
 		1970471C259908A300DE6785 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19704720259909A400DE6785 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 		19770A1C259B2CA800151837 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		19770A20259B2CD500151837 /* ThemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeData.swift; sourceTree = "<group>"; };
-		19770A23259B2D3900151837 /* ThemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettings.swift; sourceTree = "<group>"; };
 		19A501A2259A2C5C00FCFE33 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		19A501A5259A2F6200FCFE33 /* FormRowStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowStaticView.swift; sourceTree = "<group>"; };
 		19A501A8259A31F400FCFE33 /* FormRowLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowLinkView.swift; sourceTree = "<group>"; };
@@ -142,8 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				19770A1C259B2CA800151837 /* Theme.swift */,
-				19770A20259B2CD500151837 /* ThemeData.swift */,
-				19770A23259B2D3900151837 /* ThemeSettings.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -244,10 +238,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1928AF502598A8AB00ACA487 /* Persistence.swift in Sources */,
-				19770A24259B2D3900151837 /* ThemeSettings.swift in Sources */,
 				19A501A3259A2C5C00FCFE33 /* SettingsView.swift in Sources */,
 				1928AF492598A8AB00ACA487 /* ContentView.swift in Sources */,
-				19770A21259B2CD500151837 /* ThemeData.swift in Sources */,
 				19704721259909A400DE6785 /* EmptyListView.swift in Sources */,
 				19A501A6259A2F6200FCFE33 /* FormRowStaticView.swift in Sources */,
 				19A501A9259A31F400FCFE33 /* FormRowLinkView.swift in Sources */,

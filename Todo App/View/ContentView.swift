@@ -31,7 +31,7 @@ struct ContentView: View {
                         HStack {
                             Circle()
                                 .frame(width: 12, height: 12, alignment: .center)
-                                .foregroundColor(colorize(priority: Priority(rawValue: Int(todo.priority) ?? 2)))
+                                .foregroundColor(colorize(priority: Priority(rawValue: Int(todo.priority))))
                             Text(todo.name ?? "Unknown")
                                 .fontWeight(.semibold)
                             
