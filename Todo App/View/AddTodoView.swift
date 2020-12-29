@@ -28,61 +28,64 @@ struct AddTodoView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                VStack(alignment: .leading, spacing: 20) {
-                    // MARK: - Name
-                    TextField("Todo", text: $name)
-                        .padding()
-                        .background(Color(UIColor.tertiarySystemFill))
-                        .cornerRadius(9)
-                        .font(.system(size: 24, weight: .bold, design: .default))
-                    
-                    // MARK: - Priority
-                    Picker("Priority", selection: $priority) {
-                        ForEach(priorities, id: \.self) {
-                            Text($0.rawValue)
-                        }
+            VStack(alignment: .leading, spacing: 20) {
+                // MARK: - Name
+                TextEditor(text: $name)
+                    .background(Color(UIColor.tertiarySystemFill))
+                    .disableAutocorrection(true)
+                    .font(.system(size: 18, weight: .bold, design: .default))
+                    .background(Color(UIColor.tertiarySystemFill))
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200)
+                    .cornerRadius(8)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke()
+                            .foregroundColor(themeColor)
+                    )
+                
+                // MARK: - Priority
+                Picker("Priority", selection: $priority) {
+                    ForEach(priorities, id: \.self) {
+                        Text(status(priority: $0))
                     }
-                    .pickerStyle(SegmentedPickerStyle())
-                    
-                    // MARK: - Save
-                    Button(action: {
-                        guard !name.isEmpty else {
-                            errorShowing = true
-                            errorTitle = "Invalid name"
-                            errorMessage = "Make sure to enter something for\nthe new todo item."
-                            return
-                        }
-                        
-                        let todo = Todo(context: managedObjectContext)
-                        todo.name = name
-                        todo.priority = priority.rawValue
-                        
-                        do {
-                            try managedObjectContext.save()
-                            // TODO: Change .name to NO OPTIONAL
-                            print("New todo: \(todo.name ?? ""), Priority: \(todo.priority ?? "")")
-                        } catch {
-                            print(error)
-                        }
-                        
-                        presentationMode.wrappedValue.dismiss()
-                    }, label: {
-                        Text("Save")
-                            .font(.system(size: 24, weight: .bold, design: .default))
-                            .padding(.horizontal)
-                            .frame(height: 40)
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .background(themeColor)
-                            .cornerRadius(9)
-                            .foregroundColor(Color.white)
-                    })
                 }
-                .padding(.horizontal)
-                .padding(.vertical, 30)
+                .pickerStyle(SegmentedPickerStyle())
                 
                 Spacer()
+                
+                // MARK: - Save
+                Button(action: {
+                    guard !name.isEmpty else {
+                        errorShowing = true
+                        errorTitle = "Invalid name"
+                        errorMessage = "Make sure to enter something for\nthe new todo item."
+                        return
+                    }
+                    
+                    let todo = Todo(context: managedObjectContext)
+                    todo.name = name
+                    todo.priority = Int16(priority.rawValue)
+                    
+                    do {
+                        try managedObjectContext.save()
+                    } catch {
+                        print(error)
+                    }
+                    
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    Text("Save")
+                        .font(.system(size: 20, weight: .bold, design: .default))
+                        .padding(.horizontal)
+                        .frame(height: 40)
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .background(themeColor)
+                        .cornerRadius(9)
+                        .foregroundColor(Color.white)
+                })
             }
+            .padding(.horizontal)
+            .padding(.vertical, 30)
             .navigationBarTitle("New Todo", displayMode: .inline)
             .navigationBarItems(trailing:
                 Button(action: {
@@ -98,6 +101,18 @@ struct AddTodoView: View {
         .accentColor(themeColor)
         .navigationViewStyle(StackNavigationViewStyle())
     }
+    
+    private func status(priority: Priority?) -> String {
+        guard let priority = priority else { return "Unkown" }
+        switch priority {
+        case .high:
+            return "High"
+        case .normal:
+            return "Normal"
+        case .low:
+            return "Low"
+        }
+    }
 }
 
 #if DEBUG
@@ -105,6 +120,9 @@ struct AddTodoView_Previews: PreviewProvider {
     static var previews: some View {
         AddTodoView()
             .environmentObject(ThemeSettings())
+            .onAppear {
+                UITextView.appearance().backgroundColor = .clear
+            }
     }
 }
 #endif

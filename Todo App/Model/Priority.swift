@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum Priority: String {
-    case high = "High"
-    case normal = "Normal"
-    case low = "Low"
+enum Priority: Int {
+    case high = 0
+    case normal = 1
+    case low = 2
 }

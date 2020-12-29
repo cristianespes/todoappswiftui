@@ -16,7 +16,7 @@ struct PersistenceController {
         for index in 0..<4 {
             let newTodo = Todo(context: viewContext)
             newTodo.name = "Todo \(index)"
-            newTodo.priority = 0 == index ? "Low" : 1 == index ? "High" : "Normal"
+            newTodo.priority = 0 == index ? 2 : 1 == index ? 0 : 1
         }
         do {
             try viewContext.save()

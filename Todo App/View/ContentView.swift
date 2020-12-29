@@ -17,7 +17,7 @@ struct ContentView: View {
         themeData[theme.themeSettings].themeColor
     }
     
-    @FetchRequest(entity: Todo.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Todo.name, ascending: true)]) var todos: FetchedResults<Todo>
+    @FetchRequest(entity: Todo.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Todo.priority, ascending: true)]) var todos: FetchedResults<Todo>
     
     @State private var showingSettingsView = false
     @State private var showingAddTodoView = false
@@ -31,13 +31,13 @@ struct ContentView: View {
                         HStack {
                             Circle()
                                 .frame(width: 12, height: 12, alignment: .center)
-                                .foregroundColor(colorize(priority: Priority(rawValue: todo.priority ?? "")))
+                                .foregroundColor(colorize(priority: Priority(rawValue: Int(todo.priority) ?? 2)))
                             Text(todo.name ?? "Unknown")
                                 .fontWeight(.semibold)
                             
                             Spacer()
                             
-                            Text(todo.priority ?? "Unknown")
+                            Text(status(priority: Priority(rawValue: Int(todo.priority))))
                                 .font(.footnote)
                                 .foregroundColor(Color(UIColor.systemGray2))
                                 .padding(4)
@@ -139,6 +139,18 @@ struct ContentView: View {
             return .green
         case .low:
             return .blue
+        }
+    }
+    
+    private func status(priority: Priority?) -> String {
+        guard let priority = priority else { return "Unkown" }
+        switch priority {
+        case .high:
+            return "High"
+        case .normal:
+            return "Normal"
+        case .low:
+            return "Low"
         }
     }
 }
