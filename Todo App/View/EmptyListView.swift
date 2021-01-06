@@ -42,6 +42,7 @@ struct EmptyListView: View {
                     .layoutPriority(0.5)
                     .font(.system(.headline, design: .rounded))
                     .foregroundColor(themeColor)
+                    .frame(maxWidth: .infinity)
                     .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.horizontal)

@@ -2,28 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIcons</key>
 	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>Blue</string>
-			</array>
-			<key>UIPrerenderedIcon</key>
-			<false/>
-		</dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
-			<key>Blue Light</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Blue Light</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>Blue Dark</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -33,29 +19,11 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>Pink</key>
+			<key>Blue Light</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>Pink</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>Pink Light</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Pink Light</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
-			<key>Pink Dark</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Pink Dark</string>
+					<string>Blue Light</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -69,15 +37,6 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
-			<key>Green Light</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>Green Light</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-			</dict>
 			<key>Green Dark</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -87,12 +46,53 @@
 				<key>UIPrerenderedIcon</key>
 				<false/>
 			</dict>
+			<key>Green Light</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Green Light</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>Pink</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Pink</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>Pink Dark</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Pink Dark</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>Pink Light</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>Pink Light</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+		</dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>Blue</string>
+			</array>
+			<key>UIPrerenderedIcon</key>
+			<false/>
 		</dict>
 	</dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>

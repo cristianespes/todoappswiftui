@@ -377,7 +377,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Todo App/Preview Content\"";
-				DEVELOPMENT_TEAM = W9B4U9692J;
+				DEVELOPMENT_TEAM = PMY79A3SW7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Todo App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -385,7 +385,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.celapps.Todo-App";
+				PRODUCT_BUNDLE_IDENTIFIER = com.celapps.todoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -399,7 +399,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Todo App/Preview Content\"";
-				DEVELOPMENT_TEAM = W9B4U9692J;
+				DEVELOPMENT_TEAM = PMY79A3SW7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Todo App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -407,7 +407,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.celapps.Todo-App";
+				PRODUCT_BUNDLE_IDENTIFIER = com.celapps.todoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
