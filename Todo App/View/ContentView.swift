@@ -101,7 +101,7 @@ struct ContentView: View {
             )
             .navigationBarTitle("Todo", displayMode: .inline)
             .navigationBarItems(
-                leading: EditButton().accentColor(themeColor),
+                leading: editButton,
                 trailing:
                     Button(action: {
                     showingSettingsView.toggle()
@@ -116,6 +116,10 @@ struct ContentView: View {
         }
         .accentColor(themeColor)
         .navigationViewStyle(StackNavigationViewStyle())
+    }
+    
+    private var editButton: some View {
+        todos.isEmpty ? AnyView(EmptyView()) : AnyView(EditButton().accentColor(themeColor))
     }
     
     private func deleteTodo(at offsets: IndexSet) {
